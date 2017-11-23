@@ -1,0 +1,15 @@
+#!/bin/bash
+# Bash script to create tasks for testing multiple workers on RabbitMQ
+
+echo "Sending Log Messages"
+
+node emit_log_topic.js "#"
+node emit_log_topic.js 
+node emit_log_topic.js "kern.*"
+node emit_log_topic.js "*.info"
+node emit_log_topic.js 
+node emit_log_topic.js "*.critical"
+node emit_log_topic.js "kern.*" "*.critical"
+node emit_log_topic.js 
+node emit_log_topic.js 
+node emit_log_topic.js "kern.critical" "A critical kernel error"

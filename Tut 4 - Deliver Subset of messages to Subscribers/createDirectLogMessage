@@ -1,0 +1,15 @@
+#!/bin/bash
+# Bash script to create tasks for testing multiple workers on RabbitMQ
+
+echo "Sending Log Messages"
+
+node emit_log_direct.js error First.
+node emit_log_direct.js 
+node emit_log_direct.js warning Third...
+node emit_log_direct.js 
+node emit_log_direct.js 
+node emit_log_direct.js warning Sixth......
+node emit_log_direct.js 
+node emit_log_direct.js 
+node emit_log_direct.js 
+node emit_log_direct.js error Tenth...........
